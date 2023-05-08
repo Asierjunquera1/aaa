@@ -1,4 +1,4 @@
-def lista_diccionarios():
+def lista_alojamientos():
     lista=[]
     with open("madrid-airbnb-listings-small (1).csv", "r", encoding="utf-8") as archivo:
         for linea in archivo:
@@ -26,5 +26,11 @@ def contar_alojamientos_por_distrito(alojamientos):
             alojamientos_por_distrito[distrito] = 1
 
     return alojamientos_por_distrito
+
+def alojamientos_con_mas_plazas(alojamientos, numero_ocupantes):
+    lista_alojamientos=[]
+    for i in range(len(alojamientos)):
+        if int(alojamientos[i]["bedrooms"])>=numero_ocupantes:
+            lista_alojamientos.append(alojamientos[i])
 
 
