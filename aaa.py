@@ -14,4 +14,17 @@ def lista_diccionarios():
             lista_diccionarios.append(diccionario)
     return lista_diccionarios
 
-print(lista_diccionarios())
+
+def contar_alojamientos_por_distrito(alojamientos):
+    alojamientos_por_distrito = {}
+
+    for alojamiento in alojamientos:
+        distrito = alojamiento["host_neighbourhood"]
+        if distrito in alojamientos_por_distrito:
+            alojamientos_por_distrito[distrito] += 1
+        else:
+            alojamientos_por_distrito[distrito] = 1
+
+    return alojamientos_por_distrito
+
+
