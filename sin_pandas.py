@@ -1,6 +1,6 @@
 def lista_alojamientos():
     lista=[]
-    with open("madrid-airbnb-listings-small (1).csv", "r", encoding="utf-8") as archivo:
+    with open("madrid-airbnb-listings-small.csv", "r", encoding="utf-8") as archivo:
         for linea in archivo:
             linea=linea.rstrip()
             lista1=linea.split("	")
